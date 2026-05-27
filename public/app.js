@@ -23,6 +23,7 @@ function initFilters(){
         typeFilter.appendChild(opt)
     })
 
+    updateSlider(hangszerek)
     const maxPrice = Math.max(...hangszerek.map(h => h.price))
     priceFilter.max = maxPrice
     priceFilter.value = maxPrice
@@ -56,8 +57,11 @@ function render(){
     priceLabel.textContent = maxPrice.toLocaleString()
 }
 
-function updateSliderMax(data){
+function updateSlider(data){
+    const minPrice = Math.min(...data.map(h => h.price))
     const maxPrice = Math.max(...data.map(h => h.price))
+
+    priceFilter.min = minPrice
     priceFilter.max = maxPrice
 
     if (+priceFilter.value > maxPrice){
@@ -65,14 +69,6 @@ function updateSliderMax(data){
     }
 
     priceLabel.textContent = priceFilter.value.toLocaleString()
-}
-
-function updatePriceSlider(data){
-    const maxPrice = Math.max(...data.map(h => h.price))
-
-    priceFilter.max = maxPrice
-    priceFilter.value = maxPrice
-    priceLabel.textContent = maxPrice.toLocaleString()
 }
 
 typeFilter.addEventListener("change", ()=>{
@@ -84,7 +80,7 @@ typeFilter.addEventListener("change", ()=>{
         baseData = hangszerek.filter(h => h.type === type)
     }
 
-    updateSliderMax(baseData)
+    updateSlider(baseData)
     render()
 })
 priceFilter.addEventListener("input", render)
