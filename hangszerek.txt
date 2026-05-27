@@ -2,7 +2,7 @@ Gitár,Ibanez,180000
 Zongora,Yamaha,800000
 Dob,Pearl,380000
 Furulya,Aulos,6000
-Szaxofon,Selmer,1200000
+Szaxofon,Selmer,950000
 Basszusgitár,Fender,300000
 Hegedű,Stentor,80000
 Szintetizátor,Korg,300000
@@ -68,7 +68,7 @@ Dob,Alesis,200000
 Fuvola,Azumi,150000
 Zongora,Roland,700000
 Klarinét,Jupiter,120000
-Szaxofon,Selmer,1200000
+Szaxofon,Selmer,950000
 Gitár,Fender,350000
 Cselló,Yamaha,400000
 Trombita,Bach,500000

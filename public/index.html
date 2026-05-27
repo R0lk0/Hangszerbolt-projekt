@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Hangszerbolt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>MusicWorld Hangszerbolt</h1>
+
+<div class="filters">
+
+    <div>
+        <label>Hangszer típusa:</label><br>
+        <select id="typeFilter">
+            <option value="">Összes</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Maximum ár: <span id="priceLabel"></span> Ft</label><br>
+        <input type="range" id="priceFilter" step="100">
+    </div>
+
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Típus</th>
+            <th>Márka</th>
+            <th>Ár</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script src="app.js"></script>
+
+</body>
+</html>

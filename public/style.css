@@ -1,0 +1,30 @@
+body { 
+    font-family: Arial; 
+    padding: 20px; 
+}
+h1{
+    text-align: center;
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+th, td { 
+    border: 1px solid #ccc; 
+    padding: 8px; 
+}
+th { 
+    background: #eee;
+}
+tr:hover{
+    background-color: lightgray;
+    color: #fff;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
